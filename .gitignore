@@ -25,6 +25,7 @@
 # File
 gentity.py
 gentity_cfg.json
+.DS_Store
 
 # Directory
 .idea
