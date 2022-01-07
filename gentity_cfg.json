@@ -1,0 +1,19 @@
+{
+  "MYSQL_HOST": "127.0.0.1",
+  "MYSQL_PORT": "3306",
+  "MYSQL_USER": "root",
+  "MYSQL_PASSWORD": "lamberts",
+  "TYPE_DIC": {
+    "int": "Integer",
+    "double": "Double",
+    "datetime": "Timestamp",
+    "float": "Float",
+    "varchar": "String",
+    "bigint": "Long",
+    "text": "String",
+    "date": "Date",
+    "char": "String",
+    "timestamp": "Timestamp",
+    "decimal": "Double"
+  }
+}
