@@ -27,9 +27,6 @@ public class ResultAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof Result) {
             return body;
         }
-        // TODO 取消处理下载接口
-//        if (body instanceof InputStream)
-//            return
         return ResultHandler.result(body);
     }
 }
