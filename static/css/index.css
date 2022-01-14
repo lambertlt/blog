@@ -30,7 +30,7 @@ body {
     border: .05rem solid rgb(206, 205, 205);
     border-radius: .35rem;
     box-shadow: 0 0 .5rem rgb(152, 162, 255);
-    overflow: hidden;
+    overflow: auto;
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -38,10 +38,9 @@ body {
     opacity: 1;
     /* color: rgb(183, 199, 221); */
     color: rgb(206, 219, 238);
-    font-size: .7rem;
+    /* font-size: .7rem; */
 }
 
 .introduce {
-    overflow: auto;
-    line-height: 120%;
+    line-height: 1.8rem;
 }
