@@ -4,18 +4,32 @@
 <head>
     <title>lambert's blog</title>
     <meta charset="utf-8">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <canvas id="canvas"></canvas>
     <div class="content">
         <div class="introduce"></div>
+        <!-- Base16 / Decaf base16/decaf.min.css-->
     </div>
     <link rel="stylesheet" href="./static/css/index.css">
     <script type="text/javascript" src="./static/js/sky.js"></script>
     <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdn.bootcss.com/marked/0.8.1/marked.min.js"></script>
-    <link href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/monokai-sublime.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/base16/decaf.min.css" rel="stylesheet"> -->
+    <!-- https://blog.csdn.net/weixin_30628943/article/details/119370635 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.2.0/styles/base16/decaf.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/highlight.js/9.18.1/highlight.min.js"></script>
     <script type="text/javascript">
         window.onload = function() {
@@ -24,14 +38,19 @@
                 .then(response => {
                     data = response.data;
                     document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
+                    this.codeLight();
                 })
                 .catch(function(error) {
                     console.log(error);
                 });
-            // 高亮code    
-            hljs.initHighlightingOnLoad();
-            // hljs.initHighlighting();
             // marked的使用：https://www.cnblogs.com/hxsen/p/12688535.html
+        }
+
+        function codeLight() {
+            // 高亮code    
+            console.log('codeLight')
+                // hljs.initHighlightingOnLoad();
+            hljs.initHighlighting();
         }
     </script>
 </body>
