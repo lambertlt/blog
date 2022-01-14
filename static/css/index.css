@@ -38,9 +38,13 @@ body {
     opacity: 1;
     /* color: rgb(183, 199, 221); */
     color: rgb(206, 219, 238);
-    font-size: .6rem;
+    font-size: .65rem;
 }
 
 .introduce {
     line-height: 1.8rem;
+}
+
+.introduce>pre {
+    line-height: 1rem;
 }
