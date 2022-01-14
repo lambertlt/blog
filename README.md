@@ -40,5 +40,26 @@ Idea、Sublime Text3、Vim、NodePad++、VsCode、HbuilderX、
 
 # 后端 、
 
+```shell
+#! /bin/bash
 
+cd /lamebrt/j1kj/j1k
+mkdir -pv a/b/c
 
+```
+
+# javascript
+
+> javascript
+
+```javascript
+let a = a;
+console.log(a);
+alert(a);
+
+## java
+
+```java
+System.out.println("java");
+
+```
