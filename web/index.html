@@ -25,13 +25,13 @@
         // window.onload = function() {}
         axios
             .get('./../README.md')
-            .then(response => (console.log(response)))
+            .then(response => {
+                document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
+            })
             .catch(function(error) { // 请求失败处理
                 console.log(error);
             });
-        document.getElementsByClassName('introduce')[0].innerHTML =
-            marked('+ [x] Markdown  \n\n+ [ ] JavaScript \n\n### Marked in the browser\n\nRendered by **marked**. *** \n\n#### Hi ni \n我经常去的几个网站[Google][1]、[Java-er.com][2]。\n[1]:http://www.google.com \n[2]:https://www.java-er.com');
-        // https://www.cnblogs.com/hxsen/p/12688535.html
+        // marked的使用：https://www.cnblogs.com/hxsen/p/12688535.html
     </script>
 </body>
 
