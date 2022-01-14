@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    position: relative;
+    overflow-y: hidden;
+}
+
+#canvas {
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    margin-left: 20rem;
+    padding: 1rem;
+    /* 减去外边框以及内填充 */
+    width: calc(100% - 20rem - 1rem - 2rem);
+    height: calc(100% - 2rem - 2rem - 4rem);
+    border: .05rem solid rgb(206, 205, 205);
+    border-radius: .35rem;
+    box-shadow: 0 0 .5rem rgb(152, 162, 255);
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.content>div {
+    opacity: 1;
+    /* color: rgb(183, 199, 221); */
+    color: rgb(206, 219, 238);
+    font-size: .7rem;
+}
+
+.introduce {
+    overflow: auto;
+}
