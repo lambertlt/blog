@@ -26,6 +26,7 @@
         axios
             .get('./../README.md')
             .then(response => {
+                console.log(response)
                 data = response.data;
                 document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
             })
