@@ -26,6 +26,7 @@
         axios
             .get('./../README.md')
             .then(response => {
+                data = response.data;
                 document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
             })
             .catch(function(error) { // 请求失败处理
