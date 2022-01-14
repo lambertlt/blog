@@ -20,7 +20,7 @@
     <script type="text/javascript">
         window.onload = function() {
             axios
-                .get('./../README.md')
+                .get('./README.md')
                 .then(response => {
                     data = response.data;
                     document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
