@@ -4,7 +4,6 @@
 <head>
     <title>lambert's blog</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -12,26 +11,25 @@
     <div class="content">
         <div class="introduce"></div>
     </div>
+    <link rel="stylesheet" href="./css/index.css">
     <script type="text/javascript" src="./js/sky.js"></script>
     <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdn.bootcss.com/marked/0.8.1/marked.min.js"></script>
     <link href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/monokai-sublime.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/highlight.js/9.18.1/highlight.min.js"></script>
-    <script>
-        // hljs.initHighlightingOnLoad();
-        hljs.initHighlighting();
-    </script>
     <script type="text/javascript">
-        // window.onload = function() {}
         axios
             .get('./../README.md')
             .then(response => {
                 data = response.data;
                 document.getElementsByClassName('introduce')[0].innerHTML = marked(data);
             })
-            .catch(function(error) { // 请求失败处理
+            .catch(function(error) {
                 console.log(error);
             });
+        // 高亮code    
+        // hljs.initHighlightingOnLoad();
+        hljs.initHighlighting();
         // marked的使用：https://www.cnblogs.com/hxsen/p/12688535.html
     </script>
 </body>

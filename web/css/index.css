@@ -30,7 +30,7 @@ body {
     border: .05rem solid rgb(206, 205, 205);
     border-radius: .35rem;
     box-shadow: 0 0 .5rem rgb(152, 162, 255);
-    overflow-y: hidden;
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.2);
 }
 
