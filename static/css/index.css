@@ -10,11 +10,18 @@ body {
 }
 
 .box {
-    width: 100vw;
+    margin: 0 auto;
+    max-width: 1400px;
+    min-width: 740px;
     display: flex;
     justify-content: flex-start;
 }
 
+@media screen and (min-width: 499px) {
+
+}
+
+/*@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 900px) {*/
 .content {
     margin: 1rem;
     padding: 1rem;
@@ -50,6 +57,10 @@ blockquote {
 pre {
     line-height: 1rem;
     border: .05rem solid rgb(206, 205, 205);
+}
+
+a {
+    color: powderblue;
 }
 
 /*隐藏滚动栏*/
@@ -140,4 +151,25 @@ pre {
     height: 1.5rem;
     width: 100vw;
     text-align: center;
+}
+
+/*}*/
+
+@media screen and (max-width: 480px) {
+    .box {
+        /*margin: 0 auto;*/
+        max-width: 1400px;
+        min-width: 375px;
+        /*display: flex;*/
+        /*justify-content: flex-start;*/
+    }
+    .content {
+        margin: 0rem;
+        padding: .8rem;
+        border: none;
+        box-shadow: none;
+    }
+    .menubar {
+        display: none;
+    }
 }

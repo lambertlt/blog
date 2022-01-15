@@ -1,5 +1,7 @@
 # lambert’s blog
 
+[link](https://www.cnblogs.com/lambertlt/)
+
 ## 停杯投箸不能食，拔剑四顾心茫然 —— 李白
 
 > 不断学习不断总结，加油！！！
