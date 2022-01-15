@@ -1,24 +1,29 @@
 body {
     position: relative;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #canvas {
+    position: absolute;
     z-index: -1;
 }
 
+.box {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .content {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
     margin: 1rem;
-    margin-left: 20rem;
     padding: 1rem;
-    /* 减去外边框以及内填充 */
-    width: calc(100% - 20rem - 1rem - 2rem);
-    height: calc(100% - 2rem - 2rem - 4rem);
+    width: 100%;
+    /*width: 44.5rem;*/
+    /*min-width: 15rem;*/
+    height: calc(100vh - 6rem);
     border: .05rem solid rgb(206, 205, 205);
+    border-right: 0;
     border-radius: .35rem;
     box-shadow: 0 0 .5rem rgb(152, 162, 255);
     overflow: auto;
@@ -26,22 +31,113 @@ body {
     /* background-color: white; */
 }
 
-.content>div {
+.content > div {
     opacity: 1;
     color: rgb(206, 219, 238);
-    font-size: .65rem;
+    font-size: .7rem;
 }
 
 .introduce {
     line-height: 1.8rem;
 }
 
-.introduce>blockquote {
+blockquote {
     border-left: .2rem solid rgb(255, 252, 110);
     padding-left: 1rem;
 }
 
-.introduce>pre {
+/* marked-common-ui */
+pre {
     line-height: 1rem;
     border: .05rem solid rgb(206, 205, 205);
+}
+
+/*隐藏滚动栏*/
+/* chrome safari */
+.content::-webkit-scrollbar {
+    width: 0 !important
+}
+
+/* ie 10+ */
+.content {
+    -ms-overflow-style: none;
+}
+
+/* firefox */
+.content {
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+/* 功能栏 */
+.menubar {
+    height: calc(100vh - 5rem);
+    /*width: 17.5rem;*/
+    width: 17rem;
+    min-width: 17rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/*隐藏滚动栏*/
+/* chrome safari */
+.menubar::-webkit-scrollbar {
+    width: 0 !important
+}
+
+/* ie 10+ */
+.menubar {
+    -ms-overflow-style: none;
+}
+
+/* firefox */
+.menubar {
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+.menubar > div {
+    opacity: 1;
+    color: rgb(206, 219, 238);
+    font-size: .7rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: .05rem solid rgb(206, 205, 205);
+    border-right: 0;
+    border-radius: .35rem;
+    box-shadow: 0 0 .5rem rgb(152, 162, 255);
+}
+
+.weather {
+    flex: 1;
+    width: 100%;
+}
+
+.catalogue {
+    flex: 5;
+    width: 100%;
+}
+
+.search {
+    flex: 1;
+    width: 100%;
+}
+
+.tag {
+    flex: 5;
+    flex-grow: 8;
+    width: 100%;
+}
+
+.flow_statistics {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    opacity: 1;
+    color: rgb(206, 219, 238);
+    font-size: .6rem;
+    height: 1.5rem;
+    width: 100vw;
+    text-align: center;
 }
