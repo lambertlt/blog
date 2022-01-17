@@ -12,7 +12,9 @@ class FwhfStarrySky {
     }
 
     init() {
-        // document.body.innerHTML += "<canvas id='canvas'></canvas>";
+        // let menubar = document.getElementsByClassName("menubar");
+        // menubar.insertAdjacentHTML("afterbegin", "<canvas id='canvas'></canvas>");
+        document.body.innerHTML += "<canvas id='canvas'></canvas>";
         this.canvas = document.getElementById('canvas');
         this.canvas.width = this.width;
         this.canvas.height = this.height;
