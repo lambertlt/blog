@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Sky from "@/assets/js/sky"
+// import Sky from "@/assets/js/sky"
 import Contents from "@/components/Content";
 import Menubar from "@/components/Menubar";
 
@@ -18,20 +18,23 @@ export default {
     Contents,
     Menubar
   }, mounted() {
-    Sky
+    // Sky;
+  }, methods: {
+
   }
 }
 </script>
 
 <style scoped lang="stylus">
-@media screen and (max-width: 480px)
-  body
-  position: relative
-  overflow-y: hidden
-  overflow-x: hidden
+.home
+  position relative
+  overflow-y hidden
+  overflow-x hidden
+  display flex
+  justify-content flex-start
 
   #canvas
     position: absolute
-    z-index: -1
+    z-index -1
 
 </style>

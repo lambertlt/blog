@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "highlight.js": "^11.4.0",
+    "marked": "^4.0.10"
+  }
+}
